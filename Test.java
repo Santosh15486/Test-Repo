@@ -7,6 +7,14 @@ public class Test {
         // Unused variable, sonar issue S1068
         int unused = 42;
 
+        String userInput;
+        if (userInput == null) { // Null pointer dereference S2259
+            System.out.println("User input is null");
+        }
+
+        System.out.println("API Key: " + API_KEY); // Logging of sensitive data S5131
+        System.out.println("Password: " + userInput); // Logging of sensitive data S5131
+
         // Poor exception handling, sonar issue S112
         try {
             riskyOperation();
