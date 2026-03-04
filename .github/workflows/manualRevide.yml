@@ -1,0 +1,13 @@
+name: Manual review test
+
+on : workflow_call
+
+jobs:
+  deploy :
+    runs-on: ubuntu-latest
+    environment: Prod
+    steps:
+     - name: 📥 Checkout Repository
+       uses: actions/checkout@v3
+    
+    
